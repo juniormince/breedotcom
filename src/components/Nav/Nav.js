@@ -1,10 +1,12 @@
 //wake up wake up wake up
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
-import { connect } from 'react-redux';
+import { slide as Menu } from 'react-burger-menu';
 
-
+//now with style
 import '../../styles/main.css';
+// import Header from '../Header/Header';
+// import Home from '../Home/Home';
+
 
 class Nav extends Component {
   constructor(props) {
@@ -27,7 +29,7 @@ class Nav extends Component {
     this.setState({ menuOpen: state.isOpen })
   }
 
-  // close the menu
+  // this can be used to close the menu, e.g. when a user clicks a menu item
   closeMenu() {
     this.setState({ menuOpen: false })
   }
@@ -36,28 +38,22 @@ class Nav extends Component {
     this.setState({ menuOpen: !this.state.menuOpen })
   }
 
-
   render() {
     return (
-      <div>
-        <aside>
-          <Menu
-            overlayClassName={"sidenav"}
-            width={125}
-            onStateChange={this.isMenuOpen}
-            customBurgerIcon={<img src="https://i.imgur.com/PAvUyjf.png" alt="nav icon"/>}
-          >
-                    <img src="https://i.imgur.com/DCyNeo6.gif" width="200px" alt="vault boy thumbs up"/>
-          wassup. bird up.
-          <br/>
-            <Link id="contact" className="menu-item" to="/">Home</Link>
-            <Link id="contact" className="menu-item" to={`/`}>About</Link>
-            <Link id="about" className="menu-item" to="/">Contact</Link>
-          
-          </Menu>
-        </aside>
+      <div id="outer-container">
+        <Menu scaleDown pageWrapId={"page-wrap"} outerContainerId={"outer-container"}>
+        <a className="menu-item" id="home" href="/">Home</a>
+        <a className="menu-item" id="about" href="/about">About</a>
+        <a className="menu-item" id="contact" href="/contact">Contact</a>
+        </Menu>
+        FIXED HEADER TEST (seems to work if not a component)
+        <main id="page-wrap">
+          .
+          .
+          .
+        </main>
       </div>
     );
   }
 }
-export default connect()(Nav);
+export default (Nav);
