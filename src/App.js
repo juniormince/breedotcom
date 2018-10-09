@@ -6,15 +6,20 @@ import {
   Switch,
 } from 'react-router-dom';
 
+//now with style
+import './styles/main.css';
+
 //comps
 import Home from './components/Home/Home';
+import Header from './components/Header/Header';
+
 
 
 
 const App = () => (
   <div>
-    {/* header component to come
-    <Header className="header" title="HELLO IT'S BREE. LEAVE A MESSAGE." /> */}
+    {/* header component to come */}
+    <Header className="header" title="HELLO IT'S BREE." />
 
     {/* url directory */}
     <Router>
