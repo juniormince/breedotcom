@@ -1,27 +1,26 @@
 import React, { Component } from 'react';
 
+//comps
+import Mix from '../Mix/Mix';
+
 class Home extends Component {
 
 
+    render() {
+        return (
+            <div className="container">
+                <header className="header">
 
+                    <p>
+                        quiet zone. please speak softly.
+                    </p>
 
+                    <Mix/>
 
-
-
-
-  render() {
-    return (
-      <div className="container">
-        <header className="header">
-
-          <p>
-            quiet zone. please speak softly.
-          </p>
-
-        </header>
-      </div>
-    );
-  }
+                </header>
+            </div>
+        );
+    }
 }
 
 export default Home;
