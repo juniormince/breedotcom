@@ -11,15 +11,15 @@ import './styles/main.css';
 
 //comps
 import Home from './components/Home/Home';
-import Header from './components/Header/Header';
-
+import Nav from './components/Nav/Nav';
 
 
 
 const App = () => (
   <div>
+
+    <Nav />
     {/* header component to come */}
-    <Header className="header" title="HELLO IT'S BREE." />
 
     {/* url directory */}
     <Router>
