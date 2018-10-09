@@ -10,7 +10,7 @@ const Header = ({ title }) => (
         <Router>
             <div>
                 <div>
-                    <h1 className="lead">{title}</h1>
+                    <h1 className="hellobree">{title}</h1>
                     <h2>leave a message.</h2>
                 </div>
             </div>
