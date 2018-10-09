@@ -15,7 +15,7 @@ class Home extends Component {
         <header className="header">
 
           <p>
-            WELCOME TO THE THUNDERDOME (test).
+            quiet zone. please speak softly.
           </p>
 
         </header>
